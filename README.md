@@ -12,6 +12,10 @@
 ###### O aplicativo também poderá mostrar a localização atual do usuário no mapa, facilitando a identificação visual dos ônibus que estejam mais próximos ao usuário. Para habilitar esta função, é necessário conceder permissões de localização ao aplicativo e ligar a opção de Localização nas configurações do Android.
 ###### A função de localização é opcional, não sendo necessária para que o aplicativo funcione de maneira correta!
 
+###### Ao buscar por uma linha de ônibus ou um ônibus específico através de seu número de ordem, uma janela com o Google Maps irá abrir e indicar através de marcadores as localizações dos veículos disponíveis no momento.
+
+###### Os marcadores irão conter informações como a linha do ônibus, o número de ordem, a hora que o GPS do ônibus foi atualizado com o sistema e a velocidade do veículo naquele momento.
+
 ##### Abaixo está uma demonstração de busca por uma linha de ônibus específica:
 
 <img src="http://i.imgur.com/TvKtSGF.png" width="100%" height="100%" />
