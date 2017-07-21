@@ -1,0 +1,46 @@
+<resources>
+    <!-- Activity Principal do Aplicativo -->
+    <string name="app_name">BusDroid RJ</string>
+
+    <!-- Não traduzir! Do not translate! -->
+    <string name="app_version" translatable="false">1.0</string>
+    <string name="busDroidRepo" translatable="false">https://github.com/Wolfterro/BusDroid-RJ</string>
+    <!-- =============================== -->
+
+    <string name="about">Sobre</string>
+    <string name="aboutBusDroidRJ">Sobre BusDroid RJ</string>
+    <string name="aboutText">BusDroid RJ é um simples aplicativo que possui a função de
+        estimar a localização dos ônibus da cidade do Rio de Janeiro.</string>
+    <string name="aboutLincensed">Este aplicativo foi lançado sob os termos da licença MIT.</string>
+
+    <string name="insertBusLine">Insira a linha de ônibus desejada:</string>
+    <string name="busLineExample">Exemplo: 363 ou SV917</string>
+    <string name="list">Listar</string>
+    <string name="or">OU</string>
+    <string name="insertBusOrder">Insira a ordem do ônibus desejado:</string>
+    <string name="busOrderExample">Exemplo: D13198</string>
+
+    <string name="pleaseInsertBusLine">Por favor, insira uma linha de ônibus e tente novamente!</string>
+    <string name="pleaseInsertBusOrder">Por favor, insira a ordem do ônibus e tente novamente!</string>
+
+    <string name="gettingInformations">Obtendo informações</string>
+    <string name="pleaseWait">Por favor, aguarde...</string>
+
+    <string name="bus">Ônibus</string>
+    <string name="hour">Hora</string>
+    <string name="velocity">Velocidade</string>
+    <string name="kmh">km/h</string>
+
+    <string name="notAvailable">N/D</string>
+
+    <string name="errorObtainingInformations">Erro ao obter informações!</string>
+    <string name="error">Erro:</string>
+    <string name="foundXBusFromYLine" formatted="false">Encontrados %d ônibus da linha %s!</string>
+    <string name="foundBusFromOrderX" formatted="false">Encontrado ônibus da ordem %s!</string>
+
+    <string name="noBusLineFound">Nenhum ônibus da linha %s encontrado!</string>
+    <string name="noBusOrderFound">Nenhum ônibus da ordem %s encontrado!</string>
+
+    <!-- Google Maps Activity -->
+    <string name="title_activity_maps">Mapa</string>
+</resources>

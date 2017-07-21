@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDark"
+    tools:context="io.github.wolfterro.busdroidrj.AboutActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:maxWidth="200dp"
+                android:maxHeight="200dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/busdroidrj_icon" />
+
+            <TextView
+                android:id="@+id/textViewAppName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAppVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/app_version"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewBusDroidRepo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="@string/busDroidRepo"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/aboutText"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textViewLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aboutLincensed"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Activity -->
+    <string name="app_name">BusDroid RJ</string>
+
+    <string name="about">About</string>
+    <string name="aboutBusDroidRJ">About BusDroid RJ</string>
+    <string name="aboutText">BusDroid RJ is a simple app that tries to estimate bus locations
+        in the city of Rio de Janeiro.</string>
+    <string name="aboutLincensed">This app was released under the terms of the MIT License.</string>
+
+    <string name="insertBusLine">Insert the desired bus line:</string>
+    <string name="busLineExample">Example: 363 or SV917</string>
+    <string name="list">List</string>
+    <string name="or">OR</string>
+    <string name="insertBusOrder">Insert the desired bus order:</string>
+    <string name="busOrderExample">Example: D13198</string>
+
+    <string name="pleaseInsertBusLine">Please, insert a bus line and try again!</string>
+    <string name="pleaseInsertBusOrder">Please, insert a bus order and try again!</string>
+
+    <string name="gettingInformations">Obtaining information</string>
+    <string name="pleaseWait">Please wait...</string>
+
+    <string name="bus">Bus</string>
+    <string name="hour">Hour</string>
+    <string name="velocity">Velocity</string>
+    <string name="kmh">km/h</string>
+
+    <string name="notAvailable">N/A</string>
+
+    <string name="errorObtainingInformations">Error while obtaining informations!</string>
+    <string name="error">Error:</string>
+    <string name="foundXBusFromYLine" formatted="false">Found %d bus from line %s!</string>
+    <string name="foundBusFromOrderX" formatted="false">Found bus from order %s!</string>
+
+    <string name="noBusLineFound">No bus from line %s has been found!</string>
+    <string name="noBusOrderFound">No bus from order %s has been found!</string>
+
+    <!-- Google Maps Activity -->
+    <string name="title_activity_maps">Map</string>
+</resources>

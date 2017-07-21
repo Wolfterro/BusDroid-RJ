@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.wolfterro.busdroidrj.MainActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/insertBusLine"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextBusLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/busLineExample"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:theme="@style/editTextCustom" />
+
+            <Button
+                android:id="@+id/buttonLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttonDark"
+                android:text="@string/list"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/insertBusOrder"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextBusOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/busOrderExample"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:theme="@style/editTextCustom" />
+
+            <Button
+                android:id="@+id/buttonOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/buttonDark"
+                android:text="@string/list"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
