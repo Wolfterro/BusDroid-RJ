@@ -30,4 +30,5 @@ package io.github.wolfterro.busdroidrj;
 
 public class GlobalVars {
     public static String busAPI = "http://dadosabertos.rio.rj.gov.br/apiTransporte/apresentacao/rest/index.cfm/obterTodasPosicoes.json";
+    public static String busRouteAPI = "http://dadosabertos.rio.rj.gov.br/apiTransporte/Apresentacao/csv/gtfs/onibus/percursos/gtfs_linha%s-shapes.csv";
 }

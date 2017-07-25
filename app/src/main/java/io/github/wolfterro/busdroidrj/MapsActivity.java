@@ -30,6 +30,8 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -37,6 +39,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -44,10 +47,14 @@ import java.util.Random;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    // Propriedades da Activity
+    // ========================
     private GoogleMap mMap;
+
     private String busLine = "";
     private ArrayList<String> results = new ArrayList<String>();
     private LatLng busOrderLocation = null;
+    private String route = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent i = getIntent();
         busLine = i.getStringExtra("BUSLINE");
         results = i.getStringArrayListExtra("RESULTS");
+        route = i.getStringExtra("ROUTE");
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -74,16 +82,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        // Adicionando marcadores no mapa
-        // ------------------------------
+        // Adicionando marcadores customizados no mapa
+        // -------------------------------------------
         for(int x = 0; x < results.size(); x++) {
             Random random = new Random();   // So much random...
 
             String[] info = results.get(x).split(" -//- ");
             String ll = info[0];
             String order = info[1];
-            String hora = info[2];
-            String velocidade = info[3];
+            String lastUpdate = info[2];
+            String speed = info[3];
 
             double lat = Double.parseDouble(ll.split(",")[0]);
             double lng = Double.parseDouble(ll.split(",")[1]);
@@ -91,16 +99,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng loc = new LatLng(lat, lng);
 
             int selectedColor = random.nextInt(360);
-            mMap.addMarker(new MarkerOptions()
-                    .position(loc)
-                    .title(String.format("%s - %s", busLine, order))
-                    .snippet(String.format("%s: %s - %s: %s %s",
-                            getString(R.string.hour),
-                            hora,
-                            getString(R.string.velocity),
-                            velocidade,
-                            getString(R.string.kmh)))
-                    .icon(BitmapDescriptorFactory.defaultMarker(selectedColor)));
+
+            MarkerOptions options = new MarkerOptions();
+            options.position(loc);
+            options.title(String.format("%s - %s", busLine, order));
+            options.snippet(String.format("%s: %s\n%s: %s\n%s: %s %s",
+                    getString(R.string.route),
+                    route,
+                    getString(R.string.lastUpdate),
+                    lastUpdate,
+                    getString(R.string.speed),
+                    speed,
+                    getString(R.string.kmh)));
+            options.icon(BitmapDescriptorFactory.defaultMarker(selectedColor));
+
+            Marker marker = mMap.addMarker(options);
+
+            mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                @Override
+                public View getInfoWindow(Marker marker) {
+                    return null;
+                }
+
+                @Override
+                public View getInfoContents(Marker marker) {
+                    View contentView = getLayoutInflater()
+                            .inflate(R.layout.custom_markerinfo, null);
+
+                    TextView tvTitle = (TextView)contentView.findViewById(R.id.titleInfoWindow);
+                    TextView tvSnippet = (TextView)contentView.findViewById(R.id.snippetInfoWindow);
+
+                    tvTitle.setText(marker.getTitle());
+                    tvSnippet.setText(marker.getSnippet());
+
+                    return contentView;
+                }
+            });
 
             busOrderLocation = loc;
         }

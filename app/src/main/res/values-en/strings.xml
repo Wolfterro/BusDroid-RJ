@@ -7,6 +7,8 @@
     <string name="aboutBusDroidRJ">About BusDroid RJ</string>
     <string name="aboutText">BusDroid RJ is a simple app that tries to estimate bus locations
         in the city of Rio de Janeiro.</string>
+    <string name="aboutText2">This app uses public data available through the Data.rio
+        website.</string>
     <string name="aboutLincensed">This app was released under the terms of the MIT License.</string>
 
     <string name="insertBusLine">Insert the desired bus line:</string>
@@ -23,9 +25,10 @@
     <string name="pleaseWait">Please wait...</string>
 
     <string name="bus">Bus</string>
-    <string name="hour">Hour</string>
-    <string name="velocity">Velocity</string>
+    <string name="lastUpdate">Last update</string>
+    <string name="speed">Speed</string>
     <string name="kmh">km/h</string>
+    <string name="route">Route</string>
 
     <string name="notAvailable">N/A</string>
 

@@ -173,6 +173,19 @@ public class GetBusOrderThread extends Thread {
                             bLine);
 
                     intent.putExtra("BUSLINE", markerTitle);
+
+                    GetCSV csv = new GetCSV(c, bLine);
+                    csv.start();
+
+                    try {
+                        csv.join();
+                        intent.putExtra("ROUTE", csv.getRoute());
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                        intent.putExtra("ROUTE", c.getString(R.string.notAvailable));
+                    }
+
                     c.startActivity(intent);
                 }
                 else {

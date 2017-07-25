@@ -32,10 +32,11 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:cropToPadding="false"
-                android:maxWidth="200dp"
-                android:maxHeight="200dp"
+                android:maxWidth="180dp"
+                android:maxHeight="180dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/busdroidrj_icon" />
+                app:srcCompat="@drawable/busdroidrj_icon"
+                android:contentDescription="@string/app_name" />
 
             <TextView
                 android:id="@+id/textViewAppName"
@@ -78,7 +79,16 @@
                 android:layout_marginBottom="20dp"
                 android:text="@string/aboutText"
                 android:textColor="@android:color/white"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewAbout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/aboutText2"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textViewLicense"

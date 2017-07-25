@@ -1,0 +1,21 @@
+BusDroid RJ
+===========
+
+Um simples aplicativo que permite localizar as linhas de ônibus no município do Rio de Janeiro!
+-----------------------------------------------------------------------------------------------
+
+CHANGELOG:
+==========
+
+VERSÃO 1.1:
+- Alterado layout da janela de informações do marcador, permitindo adicionar mais informações futuramente.
+- Adicionado trajeto das linhas de ônibus na janela de informações do marcador.
+- Adicionada novas informações sobre o aplicativo no menu "Sobre".
+- Pequenas alterações de layout e bugfixes.
+
+#-------------------------------------------------------------------------------------------------------------------
+
+VERSÃO 1.0:
+- Versão inicial do aplicativo.
+
+#-------------------------------------------------------------------------------------------------------------------
