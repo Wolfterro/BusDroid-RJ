@@ -19,6 +19,9 @@
 ##### Abaixo está uma demonstração de busca por uma linha de ônibus específica:
 
 <img src="http://i.imgur.com/TvKtSGF.png" width="100%" height="100%" />
+<img src="http://i.imgur.com/QnkzcVG.png" width="100%" height="100%" />
+
+## [Verifique o CHANGELOG.txt para maiores informações sobre novas versões!](https://raw.github.com/Wolfterro/BusDroid-RJ/master/CHANGELOG.txt)
 
 ### Idiomas Disponíveis:
  - Português Brasileiro (Padrão)
