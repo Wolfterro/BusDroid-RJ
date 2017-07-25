@@ -37,7 +37,7 @@
     cd BusDroid-RJ/
 
 ##### Caso queira baixar o aplicativo já compilado, em formato .apk, use o link abaixo:
-#### ***Release:*** https://github.com/Wolfterro/BusDroid-RJ/releases/tag/v1.0-Release
+#### ***Release:*** https://github.com/Wolfterro/BusDroid-RJ/releases/tag/v1.1-Release
 
 #### Atenção!
 ##### Caso queira compilar o aplicativo por conta própria, terá que obter uma chave da API do [Google Maps Android API](https://developers.google.com/maps/documentation/android-api/?hl=pt-br) vinculada a sua chave de assinatura do aplicativo! 
